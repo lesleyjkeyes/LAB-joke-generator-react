@@ -1,3 +1,6 @@
+import getJoke from '../api/jokeData';
+import ShowJokes from '../components/Jokes';
+
 function Home() {
   return (
     <div
@@ -10,6 +13,7 @@ function Home() {
       }}
     >
       <h1>Welcome Home!</h1>
+      <button type="button" onClick={() => getJoke().then(<ShowJokes setup={ShowJokes.setup} />)}> Get a Joke </button>
     </div>
   );
 }
