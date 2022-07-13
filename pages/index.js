@@ -29,7 +29,7 @@ function Home() {
       <h1>Welcome Home!</h1>
       {btn === 'Get a Joke' || btn === 'Get Another Joke'
         ? <button type="button" onClick={() => getAJoke()}> {btn} </button> : <button type="button" onClick={() => setBtn('Get Another Joke')}> {btn} </button>}
-      <div>{btn === 'Get Punchline' ? joke.setup : joke.punchline}</div>
+      <div>{btn === 'Get Punchline' ? joke.setup : [joke.setup, joke.punchline]}</div>
     </div>
   );
 }
